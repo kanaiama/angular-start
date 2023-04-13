@@ -1,0 +1,19 @@
+<h1 class="text-success text-center">Live angular diretivas</h1>
+
+<div 
+  [ngStyle]="{background: count < 5 ? 'red' : 'green'}"
+  [ngClass]="{custom: count > 5}"    
+>
+  <h2 class="text-center">Contador: {{ count }}</h2>
+</div>
+
+<!-- Diretivas Estruturais -->
+<h2 *ngIf="count > 7; else menor" class="text-center">O contador passou de 7!</h2>
+
+<!-- o asterisco do ngIf é criação deste ngtemplate abaixo
+  <ng-template [ngIf]="count > 7"></ng-template>
+-->
+
+<ng-template #menor>
+  <h2 class="text-center">O contador é menor do que 7!</h2>
+</ng-template>

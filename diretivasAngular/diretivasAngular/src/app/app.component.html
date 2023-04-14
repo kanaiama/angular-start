@@ -1,9 +1,6 @@
 <h1 class="text-success text-center">Live angular diretivas</h1>
 
-<div 
-  [ngStyle]="{background: count < 5 ? 'red' : 'green'}"
-  [ngClass]="{custom: count > 5}"    
->
+<div [ngStyle]="{background: count < 5 ? 'red' : 'green'}" [ngClass]="{custom: count > 5}">
   <h2 class="text-center">Contador: {{ count }}</h2>
 </div>
 
@@ -17,3 +14,31 @@
 <ng-template #menor>
   <h2 class="text-center">O contador é menor do que 7!</h2>
 </ng-template>
+
+<ul [ngSwitch]="count" class="list-group mx-auto col-6">
+  <li class="list-group-item" *ngSwitchCase="3">
+    É IGUAL A 3
+  </li>
+
+  <li class="list-group-item" *ngSwitchCase="5">
+    É IGUAL A 5
+  </li>
+
+  <li class="list-group-item" *ngSwitchCase="6">
+    É IGUAL A 6
+  </li>
+
+  <li class="list-group-item" *ngSwitchCase="8">
+    É IGUAL A 8
+  </li>
+
+  <li class="list-group-item" *ngSwitchDefault>
+    ESSE É O DEFAULT
+  </li>
+</ul>
+
+<ul class="list-group mx-auto my-3 col-6">
+  <li class="list-group-item" *ngFor="let pessoa of pessoas">
+    O nome da pessoa {{ pessoa.nome }} {{ pessoa.sobrenome }}.
+  </li>
+</ul>

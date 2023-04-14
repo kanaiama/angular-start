@@ -9,11 +9,19 @@ import { interval } from 'rxjs';
 export class AppComponent implements OnInit {
   count:number = 0;
 
+  pessoas = [
+    {nome: "Ivone", sobrenome: "Silva"},
+    {nome: "Marcio", sobrenome: "Santos"},
+    {nome: "Didi", sobrenome: "Pereira"},
+    {nome: "Natan", sobrenome: "Kanaia"}
+  ];
+
   constructor() {
 
   }
 
   ngOnInit(): void {
+    console.log(this.pessoas);
     let interval = setInterval(() => {
       this.count++
 

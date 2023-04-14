@@ -9,6 +9,7 @@ import { interval } from 'rxjs';
 export class AppComponent implements OnInit {
   count:number = 0;
 
+  nome = 'Didi Kanaia Natan'
   pessoas = [
     {nome: "Ivone", sobrenome: "Silva"},
     {nome: "Marcio", sobrenome: "Santos"},
@@ -29,6 +30,10 @@ export class AppComponent implements OnInit {
         clearInterval(interval);
       }
     }, 700)
+  }
+
+ clicou(nome: string): void {
+    console.log('Clicou em mim!', nome);
   }
 
 }

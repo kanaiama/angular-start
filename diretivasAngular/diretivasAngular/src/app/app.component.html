@@ -40,5 +40,13 @@
 <ul class="list-group mx-auto my-3 col-6">
   <li class="list-group-item" *ngFor="let pessoa of pessoas">
     O nome da pessoa {{ pessoa.nome }} {{ pessoa.sobrenome }}.
-  </li>
+  </li> 
+</ul>
+
+<ul class="list-group mx-auto my-3 col-6">
+  <ng-template ngFor let-pessoa [ngForOf]="pessoas">
+    <li class="list-group-item">
+      O nome da pessoa {{ pessoa.nome }} {{ pessoa.sobrenome }}.
+    </li>
+  </ng-template> 
 </ul>

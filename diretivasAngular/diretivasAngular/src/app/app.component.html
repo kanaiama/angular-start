@@ -51,5 +51,13 @@
   </ng-template> 
 </ul>
 
-<h3>{{nome}}</h3>
-<button class="btn btn-success" (click)="clicou('Wilson')">Clique</button>
+<div class="col-4 mx-auto">
+  <h3>{{nome}}</h3>
+  <button class="btn btn-success col-4 mx-auto" (click)="clicou('Wilson')">Clique</button>
+</div>
+
+
+<div class="col-4 mx-auto">
+  <input type="text" class="form-control" placeholder="Digite alguma coisa" [(ngModel)]="text ">
+  <h4>Saída: {{text}}</h4>
+</div>

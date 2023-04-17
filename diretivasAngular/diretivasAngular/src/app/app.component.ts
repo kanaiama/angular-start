@@ -9,7 +9,11 @@ import { interval } from 'rxjs';
 export class AppComponent implements OnInit {
   count:number = 0;
 
-  nome = 'Didi Kanaia Natan'
+  nome: string = 'Didi Kanaia Natan';
+
+  text: string = "";
+
+
   pessoas = [
     {nome: "Ivone", sobrenome: "Silva"},
     {nome: "Marcio", sobrenome: "Santos"},
